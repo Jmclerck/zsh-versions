@@ -5,7 +5,7 @@ function versions() {
 
   if [[ $DENO_VERSION == true ]]; then
     local version=$(deno --version | rg -o "deno (\d*\.\d*\.\d*)" -r '$1') &> /dev/null
-    icons="$icons %{$fg[red]%} $version%{$reset_color%}" 
+    icons="$icons  $version" 
   fi
 
   if [[ $DOCKER_VERSION == true ]]; then
