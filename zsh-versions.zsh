@@ -24,7 +24,7 @@ function versions() {
   fi
 
   if [[ $ZSH_PYTHON_VERSION == true ]]; then
-    local version=$(python --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
+    local version=$(python3 --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
     icons="$icons%{$fg[yellow]%} $version%{$reset_color%} "
    fi
 
