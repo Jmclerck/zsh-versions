@@ -35,7 +35,7 @@ function versions() {
 
   if [[ $ZSH_YARN_VERSION == true ]]; then
     local version=$(yarn --version) &> /dev/null
-    icons="$icons%{$fg[blue]%} $version%{$reset_color%} "
+    icons="$icons%{$fg[cyan]%} $version%{$reset_color%} "
   fi
 
   print $icons
