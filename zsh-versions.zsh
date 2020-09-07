@@ -13,6 +13,7 @@ function versions() {
 
   if [[ $ZSH_DOCKER_VERSION == true ]]; then
     local version=$(docker --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
+   
     if [[ -n $version ]]; then
       icons+=("%{$fg[cyan]%} $version%{$reset_color%}")
     fi
